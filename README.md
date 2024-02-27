@@ -1,1 +1,1 @@
-My first application created in order to learn programming in Java
+My first application created to learn programming in Java.
