@@ -1,16 +1,18 @@
 Má první konzolová aplikace vytvořená v Javě sloužící ke správě osob.
 
 Aplikace je schopna:
+
   •	Vytvoření pojištěného: (jméno, příjmení, věk a telefonní číslo).
+
   •	Zobrazení seznamu všech pojištěných.
 
-•	Vyhledání pojištěného podle jména a příjmení.
+  •	Vyhledání pojištěného podle jména a příjmení.
 
-•	Editace pojištěného.
+  •	Editace pojištěného.
 
-•	Odstranění pojištěného.
+  •	Odstranění pojištěného.
 
-•	Vytvoření a uložení pojištěného do MySQL databáze.
+  •	Vytvoření a uložení pojištěného do MySQL databáze.
 
-•	Smazání pojištěného z MySQL databáze.
+  •	Smazání pojištěného z MySQL databáze.
 
