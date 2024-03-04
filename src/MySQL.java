@@ -5,26 +5,26 @@ import java.sql.SQLException;
 
 public class MySQL {
 
-        // JDBC URL, username, and password of MySQL server
+        // JDBC URL, přezdívka a heslo k mému MySQL serveru
         private static final String JDBC_URL = "jdbc:mysql://localhost:3306/basic_insured";
         private static final String USERNAME = "root";
         private static final String PASSWORD = "";
 
-        // JDBC variables for opening and managing connection
+        // JDBC proměnná k navázání a správu připojení
         private static Connection connection;
 
-        // Method to establish a connection to the database
+        // Metoda k navázání připojení k mé MySQL databázi
         private static Connection getConnection() throws SQLException {
             return DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
         }
 
-        // Method to save a person into the database
+        // Metoda pro přidání uživatele do databáze
         public static void saveInsured(Insured insured) {
             try {
-                // Open a connection
+                // Navázání připojení
                 connection = getConnection();
 
-                // Prepare SQL statement
+                // SQL příkaz
                 String sql = "INSERT INTO pojistenci (first_name, surname, age, telephone_number) VALUES (?, ?, ?, ?)";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, insured.getFirstName());
@@ -32,14 +32,14 @@ public class MySQL {
                 statement.setInt(3, insured.getAge());
                 statement.setString(4, insured.getTelephoneNumber());
 
-                // Execute the statement
+                // Provedení SQL příkazu
                 statement.executeUpdate();
                 System.out.println("Pojištěnec byl úspěšně uložen do MySQL databáze.");
 
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
-                // Close connection
+                // Přerušení připojení
                 if (connection != null) {
                     try {
                         connection.close();
@@ -50,6 +50,7 @@ public class MySQL {
             }
         }
 
+        // Metoda ke smazání uloženého uživatele v databázi
         public void deletePerson(int insured_ID) throws SQLException {
             try {
 
