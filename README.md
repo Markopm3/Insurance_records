@@ -1,6 +1,7 @@
+# InsuranceRecords
 Má první konzolová aplikace vytvořená v Javě sloužící ke správě osob.
 
-Aplikace je schopna:
+## Aplikace je schopna:
 
   •	Vytvoření pojištěného: (jméno, příjmení, věk a telefonní číslo).
 
